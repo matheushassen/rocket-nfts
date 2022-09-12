@@ -1,0 +1,485 @@
+/*=======GENERAL========*/
+
+:root {
+    font-size: 62.5%; /* 1rem = 10px */
+    --body-background: #0e0e0e;
+    --color-logo: #ff5b50;
+    --card-color: #252525;
+    --text-color: #fff;
+    --subtitle-color: #5a5757;
+    --black-text: #000;
+    --color-input: #0D0D0D;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body, html {
+    width: 100%;
+    height: 100vh;
+}
+
+html{ 
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(./assets/background.png);
+    color: var(--text-color);
+}
+
+.wrapper {
+    width: min(140rem, 100%);
+ 
+    margin-inline: auto;
+    padding-inline: 5.2rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 6.1rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+
+a{
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-decoration-line: none;
+    color: var(--text-color); 
+}
+
+a:hover {
+    color: var(--color-logo);
+}
+
+p a:hover {
+    color: var(--color-logo);
+}
+
+p{
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--subtitle-color);
+}
+
+span {
+    color: var(--color-logo);
+}
+
+section:not(.home , .gallery) {
+    background-color: var(--body-background)
+}
+
+/*=======HEADER========*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10rem;
+    padding: 5.7rem 0 ;
+    transition: 500ms;
+}
+
+header.scroll {
+    background-color: var(--body-background);
+    transition: 500ms;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+
+
+
+nav ul {
+    display: flex;
+    gap: 6rem;
+}
+
+nav ul li { 
+    list-style: none;
+}
+
+header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 23rem;
+    height: 5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+/*=======HOME========*/
+
+.home .wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rem;
+    gap: 4rem;
+}
+
+.col-a {
+    display: flex;
+    width: 40.1rem;
+    flex-direction: column;
+    gap: 5.5rem;
+}
+
+.artists {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.6rem;
+}
+
+
+.col-a h2 span{
+    font-weight: 700;
+}
+
+.col-b {
+    display: flex;
+    width: 83.6rem;
+    gap: 4rem; 
+}
+
+.col-b img {
+    width: 20rem;
+}
+
+/*=======GALLERY========*/
+
+.gallery .wrapper{
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+}
+
+.gallery img {
+    border: 1px solid var(--text-color);
+    width: 30.8rem;
+}
+
+.gallery img:nth-child(n+5) {
+    margin-top: 6rem;
+}
+
+/*=======DETAILS========*/
+
+.details .wrapper {
+    display: flex;
+}
+
+.brand-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    border-right: .1rem solid var(--subtitle-color);
+    padding: 13.3rem 6.7rem 13.3rem 0;
+}
+
+.arts-number , .sales , .artist-number{
+    text-align: center;
+}
+
+.details::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: .1rem;
+    background-color: var(--subtitle-color);
+}
+
+.details-row-a {
+    display: flex;
+    justify-content: space-between;
+    padding: 7.1rem 6.8rem;
+    height: 100%;
+    gap: 12.6rem;
+}
+
+.details-row-a h2, .details-row-b h2 {
+    margin-bottom: 6.3rem;
+}
+
+.details-row-b img {
+    width: 100%
+}
+
+.brand-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*=======POPULAR========*/
+
+.popular {
+    padding: 15rem 0;
+}
+
+.popular-col-a , .popular-col-b{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 35rem;
+}
+
+.popular-items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15.8rem;
+    
+}
+
+.popular-item-title , .popular-item-subtitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-item-title h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    
+}
+
+.popular-item-subtitle {
+    margin: 4.4rem 0rem 2.6rem 0rem;
+}
+
+.popular-item-subtitle span {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.popular-col-a::after {
+    content: "";
+    height: 71.8rem;
+    width: .1rem;
+    background-color: var(--subtitle-color);
+    position: absolute;
+    left: 50%;
+}
+
+/*=======BEST ARTISTS========*/
+
+.best-artists{
+    text-align: center;
+    padding-bottom: 14.8rem;
+}
+
+.artists-group {
+    margin: 12rem 0rem 5.4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11.1rem;
+}
+
+.artist-card {
+    display: flex;
+    justify-content: space-between;
+    width: 35rem;
+    height: 15rem;
+    padding: 2.5rem 3.2rem;
+    background-color: var(--card-color);
+}
+
+.artist-card:hover {
+    background-color: var(--color-logo);
+ 
+}
+
+.artist-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.artist-details span:hover {
+    color: var(--text-color);
+}
+
+
+.artist-details p {
+    font-weight: 500;
+}
+
+.see-all-artists {
+    gap: 1.3rem;
+}
+
+/*=======FOOTER========*/
+
+footer {
+    background-color: var(--card-color)
+}
+
+.footer-row-a {
+    padding: 8.2rem 0 6rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-row-b::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    transform: translateY(-6.8rem);
+    width: 100%;
+    height: .1rem;
+    background-color: var(--subtitle-color); 
+}
+
+.footer-row-b{
+    width: 100%;
+    padding: 6.7rem 6.2rem 8.2rem 0;
+    display: flex;
+}
+
+
+.footer-row-b h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.7rem;    
+}
+
+.footer-row-b-col-a {
+    padding-right: 6.2rem;
+}
+
+.go-to-top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--color-logo);
+}
+
+
+
+
+.newsletter input {
+    width: 28rem;
+    height: 6.6rem;
+    background-color: var(--body-background);
+    border: 0;
+}
+
+.send-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    width: 12.2rem;
+    height: 6.6rem;
+    background-color: var(--text-color);
+    
+}
+
+.send-button p {
+    color: var(--black-text);
+}
+
+.newsletter {
+    display: flex;
+    margin-top: 2.5rem;  
+}
+
+.footer-row-b-col-b {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 12.8rem;
+}
+
+.footer-row-b-col-b::before {
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translateY(.7rem);
+    left: 43%;
+    width: .1rem;
+    height: 31.5rem;
+    background-color: var(--subtitle-color); 
+}
+
+.footer-row-b-col-b ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0.7rem;
+}
+
+.footer-row-b-col-b ul li a{
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--subtitle-color);
+}
+.footer-row-b-col-b .title {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.footer-row-c {
+    display: flex;
+    justify-content: space-between;
+    height: 16.7rem;
+    align-items: center;
+}
+
+.footer-row-c::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    transform: translateY(-8.4rem);
+    width: 100%;
+    height: .1rem;
+    background-color: var(--subtitle-color); 
+}
+
+.footer-row-c .socials {
+    display: flex;
+    gap: 5rem;
+}
+
+.footer-row-c .socials img {
+    width: 3rem;
+}
+
+.footer-row-c a {
+    color: var(--subtitle-color)
+}
+
